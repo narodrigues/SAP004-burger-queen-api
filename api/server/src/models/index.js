@@ -1,14 +1,15 @@
 'use strict';
 
+require('dotenv').config()
 import fs from 'fs'
 import path from 'path'
 import Sequelize from 'sequelize'
-import configJson from '../config/config'
+// import configJson from '../config/config'
 
 const basename = path.basename(__filename)
 const env = process.env.NODE_ENV ? process.env.NODE_ENV : 'development'
 
-const config = configJson[env]
+const config = require(__dirname + '../config/config.js')[env];
 
 console.log('this is the environment: ', env)
 
