@@ -1,12 +1,21 @@
+// import { Router } from 'express'
+// import MenuController from '../controllers/menuController'
+
+// const router = Router()
+// router.get('/', MenuController.all)
+// router.post('/', MenuController.add)
+// router.get('/:id', MenuController.all)
+// router.put('/:id', MenuController.all)
+// router.delete('/:id', MenuController.all)
+// export default router
+
 import { Router } from 'express'
-import OrderController from '../controllers/ordersController'
+import OrdersController from '../controllers/ordersController'
 
 const router = Router()
-router.get('/', OrderController.all)
-router.post('/', OrderController.add)
-router.get('/:id', OrderController.getById)
-router.put('/:id', OrderController.all)
-router.delete('/:id', OrderController.all)
-router.get('/:id/items', OrderController.getItemsById)
-router.post('/:id/items', OrderController.createItem)
+router.get('/', OrdersController.getAllOrders)
+router.post('/', OrdersController.getAllOrders)
+router.get('/:id', OrdersController.getAllOrders)
+router.put('/:id', OrdersController.getAllOrders)
+router.delete('/:id', OrdersController.getAllOrders)
 export default router
